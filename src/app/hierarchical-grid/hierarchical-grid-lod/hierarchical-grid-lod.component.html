@@ -1,0 +1,28 @@
+<div class="grid__wrapper">
+  <button (click)="addRowIsland()">Add ROw Island</button>
+  <igx-hierarchical-grid
+    igxPreventDocumentScroll
+    #hGrid
+    [displayDensity]="'compact'"
+    [primaryKey]="'CustomerID'"
+    [autoGenerate]="false"
+    [height]="'580px'"
+    [width]="'100%'"
+  >
+    <igx-column field="CustomerID" [hidden]="true"></igx-column>
+    <igx-column field="CompanyName"></igx-column>
+    <igx-column field="ContactName"></igx-column>
+    <igx-column field="ContactTitle"></igx-column>
+    <igx-column field="Country"></igx-column>
+    <igx-column field="Phone"></igx-column>
+    <!-- <igx-row-island
+      #grid1
+      [key]="'Orders'"
+      [primaryKey]="'OrderID'"
+      [autoGenerate]="true"
+      (onGridCreated)="gridCreated($event, 'CustomerID')"
+      [width]="'100%'"
+    >
+    </igx-row-island> -->
+  </igx-hierarchical-grid>
+</div>

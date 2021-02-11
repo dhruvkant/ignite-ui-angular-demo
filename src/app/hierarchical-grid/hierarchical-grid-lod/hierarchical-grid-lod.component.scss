@@ -1,0 +1,9 @@
+.grid__wrapper {
+  padding: 16px;
+}
+
+:host {
+  ::ng-deep .watermark__background-img {
+    display: none;
+  }
+}
