@@ -26,8 +26,7 @@ export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
   @ViewChild("hGrid", { static: true })
   public hGrid: IgxHierarchicalGridComponent;
 
-
-  @ViewChild("hGrid", { static: true, read: ViewContainerRef })
+  @ViewChild("grid1", { static: true, read: ViewContainerRef })
   private grid1ViewRef: ViewContainerRef;
 
   public rowIslandEvent: IGridCreatedEventArgs;
@@ -93,8 +92,8 @@ export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
     this.rowIslandEvent.grid.hgridAPI.grid.cdr.markForCheck();
     this.rowIslandEvent.grid.hgridAPI.grid.cdr.detectChanges();
 
-    console.log(this.hGrid);
+
     // console.log(this.rowIslandEvent.grid.hgridAPI.getChildGrids());
-    // console.log(this.rowIslandEvent);
+    console.log(this.rowIslandEvent);
   }
 }
